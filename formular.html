@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Formular</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Formular Übung</h1>
+        </header>
+        <section>
+            <p></p>
+            <form method="post" action="formular.php">
+                <select size="9" name="Anfang">
+                    <optgroup label="PC">
+                            <option selected="selected" value="1" name="auswahl">Keyboard</option>
+                            <option value="2" name="auswahl">Mouse</option>
+                            <option value="3" name="auswahl">Graphic Card</option>
+                            <option value="4" name="auswahl">Screens</option>
+                            <option value="5" name="auswahl">Mousepad</option>
+                    </optgroup>
+                    <optgroup label="Other">
+                            <option value="6" name="auswahl">Laptop</option>
+                            <option value="7" name="auswahl">Camera</option>
+                    </optgroup>
+                </select>
+                <p><input type="submit" value="submit"> <input type="reset" value="reset"></p>
+            </form>
+        </section>
+
+    </body>
+</html>

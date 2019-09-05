@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+
+<head>
+	<!--Website Structure!-->
+	<meta name="author" content="ImMxtthew">
+	<link rel="shortcut icon" type="image/x-icon" href="../root/images/favicon.ico">
+	<meta name="date" content="2019-28-05">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<meta charset="utf-8">
+	<title>Webdev-Matthew</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../root/css/text.css">
+	<script src="https://kit.fontawesome.com/11fab18bb9.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<header>
+	<nav class="navigation-oben" id="nav">
+		<div id="logo">
+			<img src="../logo/logo.jpg" width="53px" height="53px">
+		</div>
+		<input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+		<ul class="menu">
+			<li><a href="#home">Home</a></li>
+			<li><a href="#projects">Projects</a></li>
+			<li><a href="#aboutme">About me</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</ul>
+	</nav>
+	<script>
+		$(document).ready(function () {
+			$("a").on('click', function (event) {
+				if (this.hash !== "") {
+					event.preventDefault();
+
+					var hash = this.hash;
+					var scrolleBis = 0;
+					if (hash !== "#home") {
+						scrolleBis = $(hash).offset().top - 50;
+					}
+
+					$('html, body').animate({
+						scrollTop: scrolleBis
+					}, 400, function () {
+						//window.location.hash = hash;
+					});
+				}
+			});
+		});
+	</script>
+	<!--<script>
+		var prevScrollpos = window.pageYOffset;
+		window.onscroll = function() {
+			var currentScrollPos = window.pageYOffset;
+			if(prevScrollpos > currentScrollPos) {
+				document.getElementById("nav").style.top ="0";
+			}else {
+				document.getElementById("nav").style.top = "-55px";
+			}
+			prevScrollpos = currentScrollPos;
+		}
+	</script>-->
+</header>
+
+<body>
+	<main>
+		<section class="main-content">
+			<h1 id="animation">
+				</a>
+				I'm a
+				<span class="typer" id="main" data-words="Web Developer, Developer, Student" data-delay="100"
+					data-deleteDela="1000"></span>
+				<span class="cursor" data-owner="main"></span>
+			</h1>
+			<script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
+			<div class="social">
+				<a href="https://www.instagram.com/webdev_matthew/?hl=de" target="_blank"><img id="instagram"
+						src="../root/images/instagram-logo.png"></a>
+				<a href="https://www.patreon.com/user?u=20857594" target="_blank"><img id="patreon" 
+					src="../root/images/patreon.png"></a>
+				<a href="https://github.com/Webdev-Matthew" target="_blank"><img id="github"
+						src="../root/images/github-logo.png"></a>
+				<img class="mail" src="../root/images/mail-logo.png" href="#contact">
+			</div>
+			<div class="projects">
+				<h2 id="projects">Projects</h2></a>
+				<div class="project">
+					<img src="../root/images/mywebsite.png">
+					<p class="description">This website is a big project for me. I ever wanted to have a
+						own website and now, I've realized my biggest goal. Sure, it's not
+						the best site, but it's a big step for me to get a Web Developer in
+						my future.
+					</p>
+				</div>
+				<div class="project">
+					<img src="../root/images/hovereffects.png">
+					<p class="description">
+						The hover effects series is the first series I've ever started on my
+						Instagram account. In this series, I present you many type of hover
+						effects with the HTML and CSS code and a video, where you can see the
+						effect.
+					</p>
+				</div>
+			</div>
+			<div id="aboutme">
+				<h2>About me</h2>
+				<p>My name is Matthew, i'm 15 years old and I was born in Germany. In the moment,
+					I try to learn everything important about Web Development. I created this website
+					and my instagram profile because I want to motivate and help beginners and I want to
+					give you the opportunity to follow me on my journey.
+				</p>
+				<h4>My skills</h4>
+				<table class="aboutme-table">
+					<thead>
+						<tr>
+							<th>PHP</th>
+							<th>MySQL</th>
+							<th>Java</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Basic knowledge</td>
+							<td>Basic knowledge in Databases (for example how
+								to create/connect one)
+							</td>
+							<td>Basic knowledge and heredity</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="contact">
+				<h2>Contact</h2>
+				<p>If you want to contact me, you can easily write me a direct message on Instagram or you
+					can write me an email to this address:</p>
+				<p id="email">ydev.coding@gmail.com</p>
+				<p>If you want to send me an email directly, just fill out the form
+					down below.
+				</p>
+				<form action="mailto:matthew.hegmann03@gmail.com?subject=Website">
+				<div class="contact-form">
+						<div class="input-fields">
+						  <input type="text" class="input" placeholder="Name">
+						  <input type="text" class="input" placeholder="Email Address">
+						  <input type="text" class="input" placeholder="Subject">
+						</div>
+						<div class="msg">
+						  <textarea placeholder="Message"></textarea>
+						  	<input  type="submit" class="btn"value="Abschicken">
+						</div>
+					</div>
+				</form>
+
+			</div>
+			<div id="unten">
+				<nav id="navigation-unten" id="nav">
+					<ul>
+						<li><a href="#home">Home</a></li>
+						<li><a href="#projects">Projects</a></li>
+						<li><a href="#aboutme">About me</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</section>
+	</main>
+
+</body>
+
+</html>
